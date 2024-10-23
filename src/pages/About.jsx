@@ -1,7 +1,5 @@
 import {
   FaGithub,
-  FaGlobe,
-  FaEnvelope,
   FaPalette,
   FaCheck,
   FaFileExport,
@@ -35,7 +33,7 @@ export default function Component() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-headerBackground to-white text-headerBrand scroll-smooth">
+    <div className="min-h-screen bg-gradient-to-br bg-white pt-10 text-headerBrand scroll-smooth">
       <div className="container mx-auto px-4 py-16 space-y-16">
         <header className="text-center">
           <h1 className="text-6xl font-bold mb-6">About Color Conjure 🎨</h1>
@@ -45,7 +43,9 @@ export default function Component() {
           </p>
         </header>
 
-        <section className="bg-white rounded-custom-xl shadow-2xl p-10">
+        <div className="border w-full h-[1px]" />
+
+        <section className="bg-white rounded-custom-xl rounded-xl p-10">
           <h2 className="text-4xl font-semibold mb-6">
             What is Color Conjure?
           </h2>
@@ -59,13 +59,15 @@ export default function Component() {
           </p>
         </section>
 
-        <section className="bg-white rounded-custom-xl shadow-2xl p-10">
+        <div className="border w-full h-[1px]" />
+
+        <section className="bg-white rounded-custom-xl rounded-xl p-10">
           <h2 className="text-4xl font-semibold mb-10">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center space-x-4 bg-headerBackground text-black p-6 rounded-custom-lg"
+                className="flex items-center space-x-4 bg-headerBackground rounded-md text-black p-6 rounded-custom-lg"
               >
                 <div className="text-4xl">{feature.icon}</div>
                 <span className="text-xl font-medium">{feature.text}</span>
@@ -74,13 +76,15 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-white rounded-custom-xl shadow-2xl p-10">
+        <div className="border w-full h-[1px]" />
+
+        <section className="bg-white rounded-custom-xl  rounded-xl p-10">
           <h2 className="text-4xl font-semibold mb-10">Tools & Libraries</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {tools.map((tool) => (
               <div
                 key={tool.name}
-                className="flex flex-col items-center justify-center bg-headerBackground text-black p-6 rounded-custom-lg aspect-square"
+                className="flex rounded-md flex-col items-center justify-center bg-headerBackground text-black p-6  aspect-square"
               >
                 <div className="text-5xl mb-4">{tool.icon}</div>
                 <span className="text-lg font-medium text-center">
@@ -91,7 +95,9 @@ export default function Component() {
           </div>
         </section>
 
-        <section className="bg-white rounded-custom-xl shadow-2xl p-10">
+        <div className="border w-full h-[1px]" />
+
+        <section className="bg-white rounded-custom-xl  rounded-xl p-10">
           <h2 className="text-4xl font-semibold mb-6">Get Involved</h2>
           <p className="text-xl mb-8">
             We welcome contributions from developers and designers alike! There
@@ -101,43 +107,27 @@ export default function Component() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a
               href="https://github.com/utk09-NCL/color-palette-generator"
-              className="flex items-center justify-center px-6 py-4 bg-headerBrand text-black rounded-custom-lg text-xl font-medium"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center rounded-md px-6 py-4 bg-headerBrand text-headerBackground rounded-custom-lg text-xl font-medium"
             >
               <FaGithub className="mr-3 text-2xl" /> View on GitHub
             </a>
             <a
               href="https://github.com/utk09-NCL/color-palette-generator/blob/main/CONTRIBUTING.md"
-              className="flex items-center justify-center px-6 py-4 bg-headerBrand text-black rounded-custom-lg text-xl font-medium"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center rounded-md px-6 py-4 bg-headerBrand text-headerBackground rounded-custom-lg text-xl font-medium"
             >
               Contributing Guidelines
             </a>
             <a
               href="https://github.com/utk09-NCL/color-palette-generator/blob/main/design/DESIGN.md"
-              className="flex items-center justify-center px-6 py-4 bg-headerBrand text-black rounded-custom-lg text-xl font-medium"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center rounded-md px-6 py-4 bg-headerBrand text-headerBackground rounded-custom-lg text-xl font-medium"
             >
               Contribute to Design
-            </a>
-          </div>
-        </section>
-
-        <section className="bg-white rounded-custom-xl shadow-2xl p-10">
-          <h2 className="text-4xl font-semibold mb-6">Contact</h2>
-          <p className="text-xl mb-8">
-            Have questions or want to discuss the project? Get in touch with the
-            author:
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <a
-              href="https://utk09.com"
-              className="flex items-center px-6 py-4 bg-headerBackground text-black rounded-custom-lg text-xl font-medium"
-            >
-              <FaGlobe className="mr-3 text-2xl" /> utk09.com
-            </a>
-            <a
-              href="mailto:contact@utk09.com"
-              className="flex items-center px-6 py-4 bg-headerBackground text-blackgit rounded-custom-lg text-xl font-medium"
-            >
-              <FaEnvelope className="mr-3 text-2xl" /> contact@utk09.com
             </a>
           </div>
         </section>
